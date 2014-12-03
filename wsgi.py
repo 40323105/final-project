@@ -12,7 +12,25 @@ def application(environ, start_response):
         response_body = '\n'.join(response_body)
     else:
         ctype = 'text/html'
-        response_body = '''hello world'''
+        response_body = '''
+
+<pre>
+
+def multiplication_table():
+    start=1
+    end=9+1
+    outstring=""
+    for i in range(start,end,1):
+        for y in range(start,end,1):
+            outstring+=str(i)+"x"+str(y)+"="+str(i*y)+"&nbsp;"
+        outstring+="<br />"
+    return outstring
+print(multiplication_table())
+
+</pre>
+
+
+'''
 
     status = '200 OK'
     response_headers = [('Content-Type', ctype), ('Content-Length', str(len(response_body)))]
