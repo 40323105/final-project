@@ -19,7 +19,7 @@ def application(environ, start_response):
 
 
 '''
-=======
+
         response_body = '''<!doctype html>
 <html lang="en">
 <head>
